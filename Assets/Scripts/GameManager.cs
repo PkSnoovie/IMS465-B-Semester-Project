@@ -39,11 +39,11 @@ public class GameManager : MonoBehaviour
         
         timer += Time.deltaTime;
         //Debug.Log(timer);
-        if (timer >= 5 || Enemy.health <= 5000)
+        if (timer >= 20 || Enemy.health <= 3000)
         {
-            if (Enemy.health <= 3000)
+            if (Enemy.health <= 2000)
             {
-                if (Enemy.health <= 1500)
+                if (Enemy.health <= 1000)
                 {
                     bossEnemy.currPhase = 3;
                     Debug.Log("Curernt Phase: " + bossEnemy.currPhase);

@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104f96dc7122dbe4b94172b6489c8635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  maxHealth: 10000
+  maxHealth: 4000
   frequency: 2
   magnitude: 5
   offset: 0
@@ -504,7 +504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2847267637996424646, guid: ce9dcdb14aa9b404191454a276ebc45f, type: 3}
       propertyPath: spawnerType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4140803090591174939, guid: ce9dcdb14aa9b404191454a276ebc45f, type: 3}
       propertyPath: m_Name
@@ -578,12 +578,20 @@ PrefabInstance:
       value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 2847267637996424646, guid: ce9dcdb14aa9b404191454a276ebc45f, type: 3}
+      propertyPath: speed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2847267637996424646, guid: ce9dcdb14aa9b404191454a276ebc45f, type: 3}
       propertyPath: spawnerType
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4140803090591174939, guid: ce9dcdb14aa9b404191454a276ebc45f, type: 3}
       propertyPath: m_Name
       value: Phase1BulletSpawner01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4140803090591174939, guid: ce9dcdb14aa9b404191454a276ebc45f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -634,7 +642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 761168070499899960, guid: ce9dcdb14aa9b404191454a276ebc45f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.8191521
+      value: 0.81915206
       objectReference: {fileID: 0}
     - target: {fileID: 761168070499899960, guid: ce9dcdb14aa9b404191454a276ebc45f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -646,7 +654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 761168070499899960, guid: ce9dcdb14aa9b404191454a276ebc45f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -110
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 2847267637996424646, guid: ce9dcdb14aa9b404191454a276ebc45f, type: 3}
       propertyPath: speed
@@ -666,7 +674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2847267637996424646, guid: ce9dcdb14aa9b404191454a276ebc45f, type: 3}
       propertyPath: spawnerType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4140803090591174939, guid: ce9dcdb14aa9b404191454a276ebc45f, type: 3}
       propertyPath: m_Name

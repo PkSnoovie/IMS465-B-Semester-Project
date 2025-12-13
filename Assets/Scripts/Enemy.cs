@@ -3,8 +3,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
-    public static int health = 60000;
-    public int maxHealth = 6000;
+    public static int health = 4000;
+    public int maxHealth = 4000;
     //public float speed = 4f;
     private float timer = 0f;
 
@@ -37,17 +37,20 @@ public class Enemy : MonoBehaviour
             transform.position = spawnPosition;
             bulletSpawners[1].SetActive(true);
             bulletSpawners[2].SetActive(true);
+            
         }
-        else if (currPhase == 1)
+        if (currPhase == 1)
         {
             transform.position = spawnPosition + transform.right * Mathf.Sin(Time.time * frequency + offset) * magnitude;
+            bulletSpawners[0].SetActive(true);
         }
-        else if (currPhase == 2)
+        if (currPhase == 2)
         {
             frequency = 4f;
             magnitude = 8f;
             transform.position = spawnPosition + transform.right * Mathf.Sin(Time.time * frequency + offset) * magnitude;
             bulletSpawners[4].SetActive(true);
+            bulletSpawners[3].SetActive(true);
             bulletSpawners[5].SetActive(true);
             bulletSpawners[1].SetActive(false);
             /*if (transform.position.x < 2f) //left boundary
@@ -57,8 +60,10 @@ public class Enemy : MonoBehaviour
             {
                 direction = "left";
             }*/
-        } else if (currPhase == 3)
+        } 
+        if (currPhase == 3)
         {
+            magnitude = 3f;
             transform.position = spawnPosition + transform.right * Mathf.Sin(Time.time * frequency + offset) * magnitude;
             bulletSpawners[4].SetActive(true);
         }
@@ -80,6 +85,7 @@ public class Enemy : MonoBehaviour
             } 
             else if (health < 1)
             {
+                
                 Destroy(gameObject);
                 Debug.Log("Enemy dies");
                 GameManager.gameOver = true;

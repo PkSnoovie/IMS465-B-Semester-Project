@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
 
+    [SerializeField] public AudioClip endSFX;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -36,5 +37,6 @@ public class SceneController : MonoBehaviour
     public void EndGame()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("StartMenu");
+        SoundFXManager.instance.PlaySoundFXClip(endSFX, transform, 0.9f, false);
     }
 }

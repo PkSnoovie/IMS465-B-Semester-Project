@@ -198,17 +198,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &483544970 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8995839775467478522, guid: 9044332ac0d9c1a43ab9ad77a9482d58, type: 3}
-  m_PrefabInstance: {fileID: 2035041907474204233}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &483544972 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8023038968305920028, guid: 9044332ac0d9c1a43ab9ad77a9482d58, type: 3}
   m_PrefabInstance: {fileID: 2035041907474204233}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 483544970}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3c104aec5c64b445b5bb6ae85a64602, type: 3}
@@ -570,10 +565,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1433435996685805498, guid: 9044332ac0d9c1a43ab9ad77a9482d58, type: 3}
-      propertyPath: m_WholeNumbers
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2498878131415700676, guid: 9044332ac0d9c1a43ab9ad77a9482d58, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -752,10 +743,6 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 483544972}
-    - target: {fileID: 1719433793673087877, guid: eb4725775d4c7b34d92a412d4dd0acb7, type: 3}
-      propertyPath: playerHealthBar
-      value: 
-      objectReference: {fileID: 483544970}
     - target: {fileID: 2690379490083015918, guid: eb4725775d4c7b34d92a412d4dd0acb7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10
@@ -800,10 +787,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 7719266436141411203, guid: eb4725775d4c7b34d92a412d4dd0acb7, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -821,10 +804,6 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 572065909}
-    - target: {fileID: 4033833383756858467, guid: 2e32e99bb0bc24547943a43c587e76b3, type: 3}
-      propertyPath: maxHealth
-      value: 6000
-      objectReference: {fileID: 0}
     - target: {fileID: 4490024354859481560, guid: 2e32e99bb0bc24547943a43c587e76b3, type: 3}
       propertyPath: m_Name
       value: Enemy
