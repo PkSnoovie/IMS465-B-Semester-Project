@@ -51,6 +51,7 @@ MonoBehaviour:
   rotation: 0
   speed: 1
   shootSFX: {fileID: 8300000, guid: 57b78341b769df34fa7b310f59bf6e3f, type: 3}
+  P: {fileID: 1719433793673087877, guid: eb4725775d4c7b34d92a412d4dd0acb7, type: 3}
 --- !u!212 &609822846294125462
 SpriteRenderer:
   m_ObjectHideFlags: 0

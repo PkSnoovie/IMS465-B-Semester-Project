@@ -3,8 +3,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
-    public int health = 1000;
-    public int maxHealth = 1000;
+    public static int health = 60000;
+    public int maxHealth = 6000;
     //public float speed = 4f;
     private float timer = 0f;
 
@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     public float offset = 0f;
     public int currPhase = 0;
     private Vector3 spawnPosition;
+    [SerializeField] public GameObject[] bulletSpawners;
+    
 
     public HealthBar healthBar;
     //public string direction = "right";
@@ -23,6 +25,7 @@ public class Enemy : MonoBehaviour
         health = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         spawnPosition = new Vector3(transform.position.x, transform.position.y, 0);
+        currPhase = 0;
     }
 
     // Update is called once per frame
@@ -31,7 +34,22 @@ public class Enemy : MonoBehaviour
         timer += Time.deltaTime;
         if (currPhase == 0)
         {
+            transform.position = spawnPosition;
+            bulletSpawners[1].SetActive(true);
+            bulletSpawners[2].SetActive(true);
+        }
+        else if (currPhase == 1)
+        {
             transform.position = spawnPosition + transform.right * Mathf.Sin(Time.time * frequency + offset) * magnitude;
+        }
+        else if (currPhase == 2)
+        {
+            frequency = 4f;
+            magnitude = 8f;
+            transform.position = spawnPosition + transform.right * Mathf.Sin(Time.time * frequency + offset) * magnitude;
+            bulletSpawners[4].SetActive(true);
+            bulletSpawners[5].SetActive(true);
+            bulletSpawners[1].SetActive(false);
             /*if (transform.position.x < 2f) //left boundary
             {
                 direction = "right";
@@ -39,10 +57,10 @@ public class Enemy : MonoBehaviour
             {
                 direction = "left";
             }*/
-        } else if (currPhase == 1)
+        } else if (currPhase == 3)
         {
-            frequency = 10f;
-            transform.position = spawnPosition + transform.right * Mathf.Sin(Time.time * 20f + offset) * magnitude;
+            transform.position = spawnPosition + transform.right * Mathf.Sin(Time.time * frequency + offset) * magnitude;
+            bulletSpawners[4].SetActive(true);
         }
         
     }
@@ -58,11 +76,13 @@ public class Enemy : MonoBehaviour
                 health -= 1;
                 healthBar.SetHealth(health);
                 Debug.Log("Health -1");
+                
             } 
             else if (health < 1)
             {
                 Destroy(gameObject);
                 Debug.Log("Enemy dies");
+                GameManager.gameOver = true;
             }
         }
     }

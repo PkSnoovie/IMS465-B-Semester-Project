@@ -11,6 +11,7 @@ public class EnemyBullet : MonoBehaviour
     public float speed = 1f;
     private float timer = 0f;
     [SerializeField] private AudioClip shootSFX;
+    [SerializeField] private Player P;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -40,8 +41,12 @@ public class EnemyBullet : MonoBehaviour
     {
         if (collision.CompareTag("PlayerHitBox"))
         {
-            Destroy(collision.transform.parent.gameObject);
-            Debug.Log("Bullet collides with player");
+            if(P != null)
+            {
+                P.Damage();
+            }
+            //Destroy(collision.transform.parent.gameObject);
+            //Debug.Log("Bullet collides with player");
         }
     }
 }
